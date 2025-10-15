@@ -16,8 +16,8 @@ MODEL="facebook/opt-350m"
 MODEL_NAME="facebook/opt-350m"
 MAX_MODEL_LEN=2048
 
-export VLLM_USE_V1=0
-export CUDA_VISIBLE_DEVICES=0  # Use GPU 0 instead of -1
+# export VLLM_USE_V1=0
+# export CUDA_VISIBLE_DEVICES=0  # Use GPU 0 instead of -1
 
 	# --gpu-memory-utilization 0.8 \
 	# --max-num-batched-tokens 2048 \
