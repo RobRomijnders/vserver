@@ -12,9 +12,10 @@
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 
-MODEL="facebook/opt-350m"
-MODEL_NAME="facebook/opt-350m"
-MAX_MODEL_LEN=2048
+# MODELNAME="meta-llama/Llama-3.1-8B"
+# MODELNAME="Qwen/Qwen3-Reranker-4B"
+MODELNAME="Qwen/Qwen3-4B"
+MAX_MODEL_LEN=4096
 
 # export VLLM_USE_V1=0
 # export CUDA_VISIBLE_DEVICES=0  # Use GPU 0 instead of -1
@@ -23,8 +24,8 @@ MAX_MODEL_LEN=2048
 	# --max-num-batched-tokens 2048 \
 
 python -m vllm.entrypoints.openai.api_server \
-	--model $MODEL \
-	--served-model-name $MODEL_NAME \
+	--model $MODELNAME \
+	--served-model-name $MODELNAME \
 	--port 8000 \
 	--host 0.0.0.0 \
 	--trust-remote-code \
