@@ -37,3 +37,4 @@ python -m vllm.entrypoints.openai.api_server \
 	--gpu-memory-utilization 0.9 \
 	--tensor-parallel-size 1 \
 	--pipeline-parallel-size 1
+#	--hf_overrides '{"architectures": ["Qwen3ForSequenceClassification"],"classifier_from_token": ["no", "yes"],"is_original_qwen3_reranker": true}'
